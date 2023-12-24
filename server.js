@@ -4,10 +4,15 @@ const socketIO=require("socket.io")
 const mongoose=require("mongoose");
 const bodyParser = require('body-parser');
 const dotenv = require("dotenv").config();
+const cors = require('cors'); 
+
+const { initializeDrawing } = require('./controllers/drawingController'); // Import the drawing controller
+
 
 const app=express();
+app.use(cors());
 const server = http.createServer(app);
-const io = socketIO(server);
+
 
 app.use(express.json());
 
@@ -19,18 +24,18 @@ mongoose.connect('mongodb+srv://23kartik:23kartik@cluster0.py7kx0e.mongodb.net/u
     console.error('Error connecting to MongoDB:', err.message);
   });
 
-
+initializeDrawing(server);
 
 app.get('/', (req, res) => {
     res.send('Hello, welcome to the collaborative whiteboard!');
   });
 
-  
+
   // Routes
 app.use("/api/users",require("./routes/userRoutes"));
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

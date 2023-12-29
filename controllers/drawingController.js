@@ -22,8 +22,8 @@ const initializeDrawing = (server) => {
 
 
 
-    socket.on('draw-line', ({ prevPoint, currentPoint, color }) => {
-        socket.broadcast.emit('draw-line', { prevPoint, currentPoint, color })
+    socket.on('draw-line', ({ prevPoint, currentPoint, ctx, color, lineWidth }) => {
+        socket.broadcast.emit('draw-line', {prevPoint, currentPoint, ctx, color, lineWidth  })
       })
     socket.on('clear', () => io.emit('clear'))
 

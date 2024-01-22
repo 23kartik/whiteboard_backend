@@ -29,8 +29,13 @@ const initializeDrawing = (server) => {
         console.log('received canvas state')
         socket.broadcast.emit('canvas-state-from-server', state)
       })
-
-
+      
+      socket.on('send-message', ({ message, role, timestamp }) => {
+        // Assuming you have access to the user's email and role in the connectedUsers map
+        const userEmail = connectedUsers.get(socket.id);
+        socket.emit('receive-message', { user: userEmail, message, role: 'sender', timestamp });
+        socket.broadcast.emit('receive-message', { user: userEmail, message, role: 'receiver', timestamp });
+      });
 
 socket.on('draw-line', ({ prevPoint, currentPoint, ctx, color, lineWidth  }) => {
     socket.broadcast.emit('draw-line', { prevPoint, currentPoint, ctx, color, lineWidth });

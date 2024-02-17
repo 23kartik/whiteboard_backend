@@ -54,6 +54,9 @@ const initializeDrawing = (server) => {
       const roomName = userRooms.get(socket.id);
       io.to(roomName).emit('clear');
     });
+    socket.on('deleteRoom', () => {
+      io.emit('roomDeleted');
+  });
 
     socket.on('disconnect', () => {
       if (userRooms.has(socket.id)) {

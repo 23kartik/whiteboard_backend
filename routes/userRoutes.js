@@ -1,7 +1,7 @@
 const express = require("express");
 const { registerUser, loginUser, saveDrawings, loadDrawings } = require("../controllers/userController");
 const { createRoom, terminateRoom, checkRoomIdExists,joinRoom, getRoomData } = require("../controllers/roomController");
-
+const { sendEmail } = require('../controllers/emailController');
 const router = express.Router();
 
 // User Routes
@@ -19,4 +19,5 @@ router.post('/rooms/join', joinRoom); // Assuming joinRoom handler is defined
 router.get('/rooms/:roomId', getRoomData);
 
 
+router.post('/send-email', sendEmail);
 module.exports = router;

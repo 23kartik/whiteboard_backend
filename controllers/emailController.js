@@ -444,13 +444,16 @@ const sendEmail = (req, res) => {
                                     <span style="display: inline-block;">&nbsp;</span>
                                   </td>
                                   <!-- Content -->
-                                  <td onclick="copyRoomID()" valign="top" style="
+                                  <td  valign="top" style="
                         display: inline-block;
-                        cursor: pointer; border: none; border-radius: 4px; background-color: #5457ff; font-size: 16; font-family: Open Sans, sans-serif; width: fit-content; font-weight: null; letter-spacing: undefined;
-                          color: #ffffff;
-                          padding: 0;
+                        
                         ">
-                                    Copy info
+                        <button onclick="copyRoomID()" style="cursor: pointer; border: none; border-radius: 4px; background-color: #5457ff; font-size: 16; font-family: Open Sans, sans-serif; width: fit-content; font-weight: 600; letter-spacing: undefined;
+                          color: #ffffff;
+                          padding: 0;">
+                            Copy info
+                        </button>
+                                   
                                   </td>
                                   <!-- Right padding -->
                                   <td valign="top" width="16" style="width: 16px; line-height: 1px; padding: 0;">
@@ -496,6 +499,7 @@ const sendEmail = (req, res) => {
                                     </tbody>
                                   </table>
                                 </td>
+        
                               </tr>
                             </tbody>
                           </table>
@@ -508,7 +512,7 @@ const sendEmail = (req, res) => {
                                 <td valign="top"
                                   style="background-color:#ffffff;display:block;padding-top:40px;padding-right:32px;padding-bottom:8px;padding-left:32px">
                                   <p style="font-family:Georgia, serif;line-height:26.45px;letter-spacing:1px;font-size:23px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
-                                    class="heading3">Sketch &amp; Sync: Your Real-time Collaborative Whiteboard Experience</p>
+                                    class="heading3">Draw &amp; Sync: Your Real-time Collaborative Whiteboard Experience</p>
                                 </td>
                               </tr>
                               <tr class="wp-block-editor-buttonblock-v1" align="left">
@@ -692,7 +696,7 @@ const sendEmail = (req, res) => {
         </body>
         
         </html>
-`        
+        `        
     };
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {

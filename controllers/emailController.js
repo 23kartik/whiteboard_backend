@@ -14,7 +14,7 @@ const sendEmail = (req, res) => {
         to: toEmails,
         subject,
 
-        html: `<!DOCTYPE html>
+        html:`<!DOCTYPE html>
         <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
           xmlns:o="urn:schemas-microsoft-com:office:office">
         
@@ -409,249 +409,266 @@ const sendEmail = (req, res) => {
                     class="heading1">You have been invited to join!</p>
                 </td>
               </tr>
+           
               <tr class="wp-block-editor-paragraphblock-v1">
                 <td valign="top" style="padding:0px 32px 32px 32px;background-color:#ffffff">
+                  <p class="paragraph"
+                    style="font-family:Open Sans, sans-serif;text-align:center;line-height:30.00px;font-weight:900;font-size:35px;margin:0;color:#5f5f5f;word-break:normal">
+                      <br>
+                     
+                    ${roomId}</p>
         
-                  <br>
-               <h1 class="paragraph" style="font-family:Open Sans, sans-serif;text-align:center;line-height:30.00px;font-size:55px;font-weight:'2cm';margin:0;color:#5f5f5f;word-break:normal">
-        <span style="font-weight: 900; font-size: 38px;">${roomId}</span>
-               </h1>
-        <br>
-                 <br>
-            
-        
-                <table role="presentation">
-                  <tbody>
-                    <tr>
-                      <!-- Top padding -->
-                      <td valign="top" colspan="3" height="16" style="height: 16px; line-height: 1px; padding: 0;">
-                        <span style="display: inline-block;">&nbsp;</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <!-- Left padding -->
-                      <td valign="top" width="16" style="width: 16px; line-height: 1px; padding: 0;">
-                        <span style="display: inline-block;">&nbsp;</span>
-                      </td>
-                      <!-- Content -->
-                    <div style="text-align: center;">
-        <button onclick="copyRoomID()" style="cursor: pointer; background-color: #5457ff; color: #ffffff; border: none; border-radius: 5px; padding: 15px 30px; margin-top: 5px; font-size: 16px; font-weight: bold; text-transform: uppercase; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-            Copy Info
-        </button>
-                    </div> <!-- Right padding -->
-                      <td valign="top" width="16" style="width: 16px; line-height: 1px; padding: 0;">
-                        <span style="display: inline-block;">&nbsp;</span>
-                      </td>
-                    </tr>
-                    <!-- Bottom padding -->
-                    <tr>
-                      <td valign="top" colspan="3" height="16" style="height: 16px; line-height: 1px; padding: 0;">
-                        <span style="display: inline-block;">&nbsp;</span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                </a></td>
+                </td>
               </tr>
-              </tbody>
-            </table>
-            </td>
-            </tr>
-            <tr>
-              <td style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff">
-                <table role="presentation" class="multi-column" style="width:640px;border-collapse:collapse !important"
-                  cellpadding="0" cellspacing="0">
-                  <tbody>
-                    <tr style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0"
-                      class="wp-block-editor-twocolumnsfiftyfiftyblock-v1">
-                      <td style="width:320px;float:left" class="wp-block-editor-column single-column">
-                        <table role="presentation" align="left" border="0" class="single-column" width="320"
-                          style="width:320px;float:left;border-collapse:collapse !important" cellspacing="0" cellpadding="0">
-                          <tbody>
-                            <tr class="wp-block-editor-imageblock-v1">
-                              <td
-                                style="background-color:#ffffff;padding-top:32px;padding-bottom:32px;padding-left:32px;padding-right:32px"
-                                align="center">
-                                <table align="center" width="256" class="imageBlockWrapper" style="width:256px"
-                                  role="presentation">
-                                  <tbody>
-                                    <tr>
-                                      <td style="padding:0"><img src="https://api.smtprelay.co/userfile/c686ed62-78df-4e6a-96bf-7b706d1db82c/w3.webp" width="256" height="" alt="" style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0" class="g-img">
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </td>
-                      <td style="width:320px;float:left" class="wp-block-editor-column single-column">
-                        <table role="presentation" align="right" border="0" class="single-column" width="320"
-                          style="width:320px;float:left;border-collapse:collapse !important" cellspacing="0" cellpadding="0">
-                          <tbody>
-                            <tr class="wp-block-editor-headingblock-v1">
-                              <td valign="top"
-                                style="background-color:#ffffff;display:block;padding-top:40px;padding-right:32px;padding-bottom:8px;padding-left:32px">
-                                <p style="font-family:Georgia, serif;line-height:26.45px;letter-spacing:1px;font-size:23px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
-                                  class="heading3">Sketch &amp; Sync: Your Real-time Collaborative Whiteboard Experience</p>
-                              </td>
-                            </tr>
-                            <tr class="wp-block-editor-buttonblock-v1" align="left">
-                              <td
-                                style="background-color:#ffffff;padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px;width:100%"
-                                valign="top">
-                                <table role="presentation" cellspacing="0" cellpadding="0" class="button-table">
-                                  <tbody>
-                                    <tr>
-                                      <td valign="top" class="button-td button-td-primary"
-                                        style="cursor:pointer;border:none;border-radius:50px;background-color:#304146;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;letter-spacing:0;color:#ffffff">
-                                        <a style="color:#ffffff">
-                                          <table role="presentation">
-                                            <tbody>
-                                              <tr>
-                                                <!-- Top padding -->
-                                                <td valign="top" colspan="3" height="16"
-                                                  style="height: 16px; line-height: 1px; padding: 0;">
-                                                  <span style="display: inline-block;">&nbsp;</span>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <!-- Left padding -->
-                                                <td valign="top" width="28" style="width: 28px; line-height: 1px; padding: 0;">
-                                                  <span style="display: inline-block;">&nbsp;</span>
-                                                </td>
-                                                <!-- Content -->
-                                                <td valign="top" style="
+              <tr class="wp-block-editor-buttonblock-v1" align="center">
+                <td
+                  style="background-color:#ffffff;padding-top:20px;padding-right:20px;padding-bottom:60px;padding-left:20px;width:100%"
+                  valign="top">
+                  <table role="presentation" cellspacing="0" cellpadding="0" class="button-table">
+                    <tbody>
+                      <tr>
+                        <td valign="top" class="button-td button-td-primary"
+                          style="cursor:pointer;border:none;border-radius:4px;background-color:#5457ff;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;color:#ffffff">
+                          <a style="color:#ffffff">
+                            <table role="presentation">
+                              <tbody>
+                                <tr>
+                                  <!-- Top padding -->
+                                  <td valign="top" colspan="3" height="16" style="height: 16px; line-height: 1px; padding: 0;">
+                                    <span style="display: inline-block;">&nbsp;</span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <!-- Left padding -->
+                                  <td valign="top" width="16" style="width: 16px; line-height: 1px; padding: 0;">
+                                    <span style="display: inline-block;">&nbsp;</span>
+                                  </td>
+                                  <!-- Content -->
+                                  <td onclick="copyRoomID()" valign="top" style="
+                        display: inline-block;
+                        cursor: pointer; border: none; border-radius: 4px; background-color: #5457ff; font-size: 16; font-family: Open Sans, sans-serif; width: fit-content; font-weight: null; letter-spacing: undefined;
+                          color: #ffffff;
+                          padding: 0;
+                        ">
+                                    Copy info
+                                  </td>
+                                  <!-- Right padding -->
+                                  <td valign="top" width="16" style="width: 16px; line-height: 1px; padding: 0;">
+                                    <span style="display: inline-block;">&nbsp;</span>
+                                  </td>
+                                </tr>
+                                <!-- Bottom padding -->
+                                <tr>
+                                  <td valign="top" colspan="3" height="16" style="height: 16px; line-height: 1px; padding: 0;">
+                                    <span style="display: inline-block;">&nbsp;</span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff">
+                  <table role="presentation" class="multi-column" style="width:640px;border-collapse:collapse !important"
+                    cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0"
+                        class="wp-block-editor-twocolumnsfiftyfiftyblock-v1">
+                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                          <table role="presentation" align="left" border="0" class="single-column" width="320"
+                            style="width:320px;float:left;border-collapse:collapse !important" cellspacing="0" cellpadding="0">
+                            <tbody>
+                              <tr class="wp-block-editor-imageblock-v1">
+                                <td
+                                  style="background-color:#ffffff;padding-top:32px;padding-bottom:32px;padding-left:32px;padding-right:32px"
+                                  align="center">
+                                  <table align="center" width="256" class="imageBlockWrapper" style="width:256px"
+                                    role="presentation">
+                                    <tbody>
+                                      <tr>
+                                        <td style="padding:0"><img src="https://api.smtprelay.co/userfile/c686ed62-78df-4e6a-96bf-7b706d1db82c/w3.webp" width="256" height="" alt="" style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0" class="g-img">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                          <table role="presentation" align="right" border="0" class="single-column" width="320"
+                            style="width:320px;float:left;border-collapse:collapse !important" cellspacing="0" cellpadding="0">
+                            <tbody>
+                              <tr class="wp-block-editor-headingblock-v1">
+                                <td valign="top"
+                                  style="background-color:#ffffff;display:block;padding-top:40px;padding-right:32px;padding-bottom:8px;padding-left:32px">
+                                  <p style="font-family:Georgia, serif;line-height:26.45px;letter-spacing:1px;font-size:23px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
+                                    class="heading3">Sketch &amp; Sync: Your Real-time Collaborative Whiteboard Experience</p>
+                                </td>
+                              </tr>
+                              <tr class="wp-block-editor-buttonblock-v1" align="left">
+                                <td
+                                  style="background-color:#ffffff;padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px;width:100%"
+                                  valign="top">
+                                  <table role="presentation" cellspacing="0" cellpadding="0" class="button-table">
+                                    <tbody>
+                                      <tr>
+                                        <td valign="top" class="button-td button-td-primary"
+                                          style="cursor:pointer;border:none;border-radius:50px;background-color:#304146;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;letter-spacing:0;color:#ffffff">
+                                          <a style="color:#ffffff">
+                                            <table role="presentation">
+                                              <tbody>
+                                                <tr>
+                                                  <!-- Top padding -->
+                                                  <td valign="top" colspan="3" height="16"
+                                                    style="height: 16px; line-height: 1px; padding: 0;">
+                                                    <span style="display: inline-block;">&nbsp;</span>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <!-- Left padding -->
+                                                  <td valign="top" width="28"
+                                                    style="width: 28px; line-height: 1px; padding: 0;">
+                                                    <span style="display: inline-block;">&nbsp;</span>
+                                                  </td>
+                                                  <!-- Content -->
+                                                  <td valign="top" style="
                         display: inline-block;
                         cursor: pointer; border: none; border-radius: 50px; background-color: #304146; font-size: 16; font-family: Open Sans, sans-serif; width: fit-content; font-weight: null; letter-spacing: 0;
                           color: #ffffff;
                           padding: 0;
                         ">
-                                                  <a href="https://sync-sketch-three.vercel.app/"
-                                                    style="color:#ffffff; text-decoration: none;">
-                                                    Explore
-                                                </td>
-                                                <!-- Right padding -->
-                                                <td valign="top" width="28" style="width: 28px; line-height: 1px; padding: 0;">
-                                                  <span style="display: inline-block;">&nbsp;</span>
-                                                </td>
-                                              </tr>
-                                              <!-- Bottom padding -->
-                                              <tr>
-                                                <td valign="top" colspan="3" height="16"
-                                                  style="height: 16px; line-height: 1px; padding: 0;">
-                                                  <span style="display: inline-block;">&nbsp;</span>
-                                                </td>
-                                              </tr>
-                                            </tbody>
-                                          </table>
-                                        </a></td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-            </tr>
-            <tr class="wp-block-editor-spacerblock-v1">
-              <td style="background-color:#ffffff;line-height:32px;font-size:32px;width:100%;min-width:100%">&nbsp;</td>
-            </tr>
-            <tr class="wp-block-editor-imageblock-v1">
-              <td style="background-color:#ffffff;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0" align="center">
-                <table align="center" width="640" class="imageBlockWrapper" style="width:640px" role="presentation">
-                  <tbody>
-                    <tr>
-                      <td style="padding:0"><img src="https://api.smtprelay.co/userfile/c686ed62-78df-4e6a-96bf-7b706d1db82c/w4.jpeg" width="640" height="" alt="" style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0" class="g-img">
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-            </tr>
-            <tr class="wp-block-editor-socialiconsblock-v1" role="article" aria-roledescription="social-icons"
-              style="display:table-row;background-color:#304146">
-              <td style="width:100%">
-                <table
-                  style="background-color:#304146;width:100%;padding-top:42px;padding-bottom:32px;padding-left:32px;padding-right:32px;border-collapse:separate !important"
-                  cellpadding="0" cellspacing="0" role="presentation">
-                  <tbody>
-                    <tr>
-                      <td align="center" valign="top">
-                        <div style="max-width:576px">
-                          <table role="presentation" style="width:100%" cellpadding="0" cellspacing="0" width="100%">
-                            <tbody>
-                              <tr>
-                                <td valign="top">
-                                  <div
-                                    style="margin-left:auto;margin-right:auto;margin-top:-5px;margin-bottom:-5px;width:100%;max-width:156px">
-                                    <table role="presentation" style="padding-left:210" width="100%" cellpadding="0"
-                                      cellspacing="0">
-                                      <tbody>
-                                        <tr>
-                                          <td>
-                                            <table role="presentation" align="left" style="float:left"
-                                              class="single-social-icon" cellpadding="0" cellspacing="0">
-                                              <tbody>
+                                                    <a href="https://sync-sketch-three.vercel.app/" style="color:#ffffff; text-decoration: none;">
+                                                      Explore
+                                                    </a>
+                                                  </td>
+                                                  <!-- Right padding -->
+                                                  <td valign="top" width="28"
+                                                    style="width: 28px; line-height: 1px; padding: 0;">
+                                                    <span style="display: inline-block;">&nbsp;</span>
+                                                  </td>
+                                                </tr>
+                                                <!-- Bottom padding -->
                                                 <tr>
-                                                  <td valign="top"
-                                                    style="padding-top:5px;padding-bottom:5px;padding-left:10px;padding-right:10px;border-collapse:collapse !important;border-spacing:0;font-size:0">
-                                                    <a class="social-icon--link" href="https://twitter.com/23kartike"
-                                                      target="_blank"
-                                                      rel="noreferrer"><img src="https://template-editor-assets.s3.eu-west-3.amazonaws.com/assets/social-icons/x/x-square-solid-white.png" width="32" height="32" style="max-width:32px;display:block;border:0" alt="X (formerly Twitter)"></a>
+                                                  <td valign="top" colspan="3" height="16"
+                                                    style="height: 16px; line-height: 1px; padding: 0;">
+                                                    <span style="display: inline-block;">&nbsp;</span>
                                                   </td>
                                                 </tr>
                                               </tbody>
                                             </table>
-                                            <table role="presentation" align="left" style="float:left"
-                                              class="single-social-icon" cellpadding="0" cellspacing="0">
-                                              <tbody>
-                                                <tr>
-                                                  <td valign="top"
-                                                    style="padding-top:5px;padding-bottom:5px;padding-left:10px;padding-right:10px;border-collapse:collapse !important;border-spacing:0;font-size:0">
-                                                    <a class="social-icon--link"
-                                                      href="https://www.linkedin.com/in/kartike-tiwari-5048701ab/"
-                                                      target="_blank"
-                                                      rel="noreferrer"><img src="https://template-editor-assets.s3.eu-west-3.amazonaws.com/assets/social-icons/linkedin/linkedin-square-solid-white.png" width="32" height="32" style="max-width:32px;display:block;border:0" alt="LinkedIn"></a>
-                                                  </td>
-                                                </tr>
-                                              </tbody>
-                                            </table>
-                                            <table role="presentation" align="left" style="float:left"
-                                              class="single-social-icon" cellpadding="0" cellspacing="0">
-                                              <tbody>
-                                                <tr>
-                                                  <td valign="top"
-                                                    style="padding-top:5px;padding-bottom:5px;padding-left:10px;padding-right:10px;border-collapse:collapse !important;border-spacing:0;font-size:0">
-                                                    <a class="social-icon--link"
-                                                      href="https://vercel.com/23kartik/kartike-portfolio" target="_blank"
-                                                      rel="noreferrer"><img src="https://template-editor-assets.s3.eu-west-3.amazonaws.com/assets/social-icons/website/website-square-solid-white.png" width="32" height="32" style="max-width:32px;display:block;border:0" alt="Website"></a>
-                                                  </td>
-                                                </tr>
-                                              </tbody>
-                                            </table>
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </div>
+                                          </a></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
                                 </td>
                               </tr>
                             </tbody>
                           </table>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-            </tr>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr class="wp-block-editor-spacerblock-v1">
+                <td style="background-color:#ffffff;line-height:32px;font-size:32px;width:100%;min-width:100%">&nbsp;</td>
+              </tr>
+              <tr class="wp-block-editor-imageblock-v1">
+                <td style="background-color:#ffffff;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0"
+                  align="center">
+                  <table align="center" width="640" class="imageBlockWrapper" style="width:640px" role="presentation">
+                    <tbody>
+                      <tr>
+                        <td style="padding:0"><img src="https://api.smtprelay.co/userfile/c686ed62-78df-4e6a-96bf-7b706d1db82c/w4.jpeg" width="640" height="" alt="" style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0" class="g-img">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr class="wp-block-editor-socialiconsblock-v1" role="article" aria-roledescription="social-icons"
+                style="display:table-row;background-color:#304146">
+                <td style="width:100%">
+                  <table
+                    style="background-color:#304146;width:100%;padding-top:42px;padding-bottom:32px;padding-left:32px;padding-right:32px;border-collapse:separate !important"
+                    cellpadding="0" cellspacing="0" role="presentation">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="top">
+                          <div style="max-width:576px">
+                            <table role="presentation" style="width:100%" cellpadding="0" cellspacing="0" width="100%">
+                              <tbody>
+                                <tr>
+                                  <td valign="top">
+                                    <div
+                                      style="margin-left:auto;margin-right:auto;margin-top:-5px;margin-bottom:-5px;width:100%;max-width:156px">
+                                      <table role="presentation" style="padding-left:210" width="100%" cellpadding="0"
+                                        cellspacing="0">
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                              <table role="presentation" align="left" style="float:left"
+                                                class="single-social-icon" cellpadding="0" cellspacing="0">
+                                                <tbody>
+                                                  <tr>
+                                                    <td valign="top"
+                                                      style="padding-top:5px;padding-bottom:5px;padding-left:10px;padding-right:10px;border-collapse:collapse !important;border-spacing:0;font-size:0">
+                                                      <a class="social-icon--link" href="https://twitter.com/23kartike"
+                                                        target="_blank"
+                                                        rel="noreferrer"><img src="https://template-editor-assets.s3.eu-west-3.amazonaws.com/assets/social-icons/x/x-square-solid-white.png" width="32" height="32" style="max-width:32px;display:block;border:0" alt="X (formerly Twitter)"></a>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                              <table role="presentation" align="left" style="float:left"
+                                                class="single-social-icon" cellpadding="0" cellspacing="0">
+                                                <tbody>
+                                                  <tr>
+                                                    <td valign="top"
+                                                      style="padding-top:5px;padding-bottom:5px;padding-left:10px;padding-right:10px;border-collapse:collapse !important;border-spacing:0;font-size:0">
+                                                      <a class="social-icon--link"
+                                                        href="https://www.linkedin.com/in/kartike-tiwari-5048701ab/"
+                                                        target="_blank"
+                                                        rel="noreferrer"><img src="https://template-editor-assets.s3.eu-west-3.amazonaws.com/assets/social-icons/linkedin/linkedin-square-solid-white.png" width="32" height="32" style="max-width:32px;display:block;border:0" alt="LinkedIn"></a>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                              <table role="presentation" align="left" style="float:left"
+                                                class="single-social-icon" cellpadding="0" cellspacing="0">
+                                                <tbody>
+                                                  <tr>
+                                                    <td valign="top"
+                                                      style="padding-top:5px;padding-bottom:5px;padding-left:10px;padding-right:10px;border-collapse:collapse !important;border-spacing:0;font-size:0">
+                                                      <a class="social-icon--link"
+                                                        href="https://vercel.com/23kartik/kartike-portfolio" target="_blank"
+                                                        rel="noreferrer"><img src="https://template-editor-assets.s3.eu-west-3.amazonaws.com/assets/social-icons/website/website-square-solid-white.png" width="32" height="32" style="max-width:32px;display:block;border:0" alt="Website"></a>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
             </table>
             <!--[if mso | IE]>
                                     </td>
@@ -675,7 +692,7 @@ const sendEmail = (req, res) => {
         </body>
         
         </html>
-        `
+`        
     };
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
